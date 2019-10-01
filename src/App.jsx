@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
 import "semantic-ui-css/semantic.min.css";
+import Countdown from 'react-countdown-now';
+
 
 import {
   Button,
@@ -11,8 +13,13 @@ import {
   Header,
   Icon,
   Menu,
-  Message
+  Message,
+  Checkbox,
+  Segment,
+  Table
 } from "semantic-ui-react";
+import Image1 from './Images/lavadora.jpg'
+
 
 import "./App.css";
 
@@ -33,7 +40,6 @@ class App extends Component {
 
     this.setState(newState);
   };
-
   render() {
     return (
       <div className="App">
@@ -105,43 +111,268 @@ class App extends Component {
           </Container>
         </Message>
         <Container>
-          <Grid stackable columns="three">
+          <Grid stackable columns="four">
             <Grid.Column>
-              <Header as="h1">Heading</Header>
-              <p>
-                Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
-                tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                fermentum massa justo sit amet risus. Etiam porta sem malesuada
-                magna mollis euismod. Donec sed odio dui.
-              </p>
-              <Button basic size="small">
-                View details &raquo;
-              </Button>
+              <Header as="h1">Lavadora</Header>
+              <Countdown date={Date.now() + 7200000} />
+              <img src={Image1} className="Lavadora" alt="imagen" />
+            <div>
+             <Segment compact>
+              <Checkbox toggle />
+             </Segment>
+           </div>
+           <Header as='h3'>Lista de espera</Header>
+           <Table basic='very' celled collapsing>
+    <Table.Header>
+      <Table.Row>
+        <Table.HeaderCell>Residente</Table.HeaderCell>
+        <Table.HeaderCell>Departamento</Table.HeaderCell>
+      </Table.Row>
+    </Table.Header>
+
+    <Table.Body>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' image>
+            <Header.Content>
+              Lena
+              <Header.Subheader>Human Resources</Header.Subheader>
+            </Header.Content>
+          </Header>
+        </Table.Cell>
+        <Table.Cell>22</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' image>
+            <Header.Content>
+              Matthew
+              <Header.Subheader>Fabric Design</Header.Subheader>
+            </Header.Content>
+          </Header>
+        </Table.Cell>
+        <Table.Cell>15</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' image>
+            <Header.Content>
+              Lindsay
+              <Header.Subheader>Entertainment</Header.Subheader>
+            </Header.Content>
+          </Header>
+        </Table.Cell>
+        <Table.Cell>12</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' image>
+            <Header.Content>
+              Mark
+              <Header.Subheader>Executive</Header.Subheader>
+            </Header.Content>
+          </Header>
+        </Table.Cell>
+        <Table.Cell>11</Table.Cell>
+      </Table.Row>
+    </Table.Body>
+  </Table>
+  <Button>Agregar a la lista</Button>
             </Grid.Column>
             <Grid.Column>
-              <Header as="h1">Heading</Header>
-              <p>
-                Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
-                tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                fermentum massa justo sit amet risus. Etiam porta sem malesuada
-                magna mollis euismod. Donec sed odio dui.
-              </p>
-              <Button basic size="small">
-                View details &raquo;
-              </Button>
+              <Header as="h1">Lavadora</Header>
+              <img src={Image1} className="Lavadora" alt="imagen" />
+              <div>
+             <Segment compact>
+              <Checkbox toggle />
+             </Segment>
+             <Header as='h3'>Lista de espera</Header>
+             <Table basic='very' celled collapsing>
+    <Table.Header>
+      <Table.Row>
+        <Table.HeaderCell>Residente</Table.HeaderCell>
+        <Table.HeaderCell>Departamento</Table.HeaderCell>
+      </Table.Row>
+    </Table.Header>
+    <Table.Body>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' image>
+            <Header.Content>
+              Lena
+              <Header.Subheader>Human Resources</Header.Subheader>
+            </Header.Content>
+          </Header>
+        </Table.Cell>
+        <Table.Cell>22</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' image>
+            <Header.Content>
+              Matthew
+              <Header.Subheader>Fabric Design</Header.Subheader>
+            </Header.Content>
+          </Header>
+        </Table.Cell>
+        <Table.Cell>15</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' image>
+            <Header.Content>
+              Lindsay
+              <Header.Subheader>Entertainment</Header.Subheader>
+            </Header.Content>
+          </Header>
+        </Table.Cell>
+        <Table.Cell>12</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' image>
+            <Header.Content>
+              Mark
+              <Header.Subheader>Executive</Header.Subheader>
+            </Header.Content>
+          </Header>
+        </Table.Cell>
+        <Table.Cell>11</Table.Cell>
+      </Table.Row>
+    </Table.Body>
+  </Table>
+  <Button>Agregar a la lista</Button>
+           </div>
             </Grid.Column>
             <Grid.Column>
-              <Header as="h1">Heading</Header>
-              <p>
-                Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
-                tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                fermentum massa justo sit amet risus. Etiam porta sem malesuada
-                magna mollis euismod. Donec sed odio dui.
-              </p>
-              <Button basic size="small">
-                View details &raquo;
-              </Button>
-            </Grid.Column>
+              <Header as="h1">Secadora</Header>
+              <img src={Image1} className="Lavadora" alt="imagen" />
+            <div>
+             <Segment compact>
+              <Checkbox toggle />
+             </Segment>
+             <Header as='h3'>Lista de espera</Header>
+             <Table basic='very' celled collapsing>
+    <Table.Header>
+      <Table.Row>
+        <Table.HeaderCell>Residente</Table.HeaderCell>
+        <Table.HeaderCell>Departamento</Table.HeaderCell>
+      </Table.Row>
+    </Table.Header>
+    <Table.Body>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' image>
+            <Header.Content>
+              Lena
+              <Header.Subheader>Human Resources</Header.Subheader>
+            </Header.Content>
+          </Header>
+        </Table.Cell>
+        <Table.Cell>22</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' image>
+            <Header.Content>
+              Matthew
+              <Header.Subheader>Fabric Design</Header.Subheader>
+            </Header.Content>
+          </Header>
+        </Table.Cell>
+        <Table.Cell>15</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' image>
+            <Header.Content>
+              Lindsay
+              <Header.Subheader>Entertainment</Header.Subheader>
+            </Header.Content>
+          </Header>
+        </Table.Cell>
+        <Table.Cell>12</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' image>
+            <Header.Content>
+              Mark
+              <Header.Subheader>Executive</Header.Subheader>
+            </Header.Content>
+          </Header>
+        </Table.Cell>
+        <Table.Cell>11</Table.Cell>
+      </Table.Row>
+    </Table.Body>
+  </Table>
+  <Button>Agregar a la lista</Button>
+           </div>            </Grid.Column>
+            <Grid.Column>
+              <Header as="h1">Secadora</Header>
+              <img src={Image1} className="Lavadora" alt="imagen" />
+            <div>
+             <Segment compact>
+              <Checkbox toggle />
+             </Segment>
+             <Header as='h3'>Lista de espera</Header>
+             <Table basic='very' celled collapsing>
+    <Table.Header>
+      <Table.Row>
+        <Table.HeaderCell>Residente</Table.HeaderCell>
+        <Table.HeaderCell>Departamento</Table.HeaderCell>
+      </Table.Row>
+    </Table.Header>
+    <Table.Body>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' image>
+            <Header.Content>
+              Lena
+              <Header.Subheader>Human Resources</Header.Subheader>
+            </Header.Content>
+          </Header>
+        </Table.Cell>
+        <Table.Cell>22</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' image>
+            <Header.Content>
+              Matthew
+              <Header.Subheader>Fabric Design</Header.Subheader>
+            </Header.Content>
+          </Header>
+        </Table.Cell>
+        <Table.Cell>15</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' image>
+            <Header.Content>
+              Lindsay
+              <Header.Subheader>Entertainment</Header.Subheader>
+            </Header.Content>
+          </Header>
+        </Table.Cell>
+        <Table.Cell>12</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' image>
+            <Header.Content>
+              Mark
+              <Header.Subheader>Executive</Header.Subheader>
+            </Header.Content>
+          </Header>
+        </Table.Cell>
+        <Table.Cell>11</Table.Cell>
+      </Table.Row>
+    </Table.Body>
+  </Table>
+  <Button>Agregar a la lista</Button>
+           </div>
+          </Grid.Column>
           </Grid>
           <Divider hidden />
           <Divider />
