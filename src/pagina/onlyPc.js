@@ -4,28 +4,35 @@ import "semantic-ui-css/semantic.min.css";
 
 import {
   Container,
-  Form,
+  Button,
   Grid,
   Menu
 } from "semantic-ui-react";
 
+import Image1 from './Images/logo.png'
+
+
 export default () => (
-    <Grid padded className="tablet computer only">
-        <Menu inverted borderless fluid fixed="top">
-            <Container>
-              <Menu.Item header>Project Name</Menu.Item>
-                <Menu.Menu position="right">
-                    <Menu.Item>
-                        <Form>
-                            <Form.Group inline>
-                                <Form.Input placeholder="Email" type="text" />
-                                <Form.Input placeholder="Password" type="password" />
-                                <Form.Button content="Sign in" color="green" />
-                            </Form.Group>
-                        </Form>
-                    </Menu.Item>
-              </Menu.Menu>
-            </Container>
-          </Menu>
-    </Grid>
+
+  <Grid padded className="tablet computer only">
+    <Menu inverted borderless fluid fixed="top">
+      <Container>
+        <Menu.Item header>
+          <img src={Image1} className="Logo" alt="imagen" />
+          Aincrad</Menu.Item>
+        <Menu.Item as='a' active>
+          Home
+                </Menu.Item>
+        <Menu.Item as='a'>Work</Menu.Item>
+        <Menu.Item position='right'>
+          <Button inverted as='a'>
+            Log in
+                  </Button>
+          <Button inverted as='a'style={{ marginLeft: '0.5em' }}>
+            Sign Up
+                  </Button>
+        </Menu.Item>
+      </Container>
+    </Menu>
+  </Grid>
 );
