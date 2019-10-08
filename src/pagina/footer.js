@@ -8,7 +8,6 @@ import {
   Grid,
   List,
   Divider,
-  Image,
   Segment
 } from "semantic-ui-react";
 export default () => (

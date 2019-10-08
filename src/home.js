@@ -12,7 +12,7 @@ import Footer from './pagina/footer';
 
 export default () => (
   <div>
-    <Pc />
+    <Pc/>
     <Mobile/>
     <Header/>
     <Columna/>

@@ -2,7 +2,7 @@ import React from "react";
 
 import "semantic-ui-css/semantic.min.css";
 
-import { Button, Container, Header, Message, HeaderSubheader, Divider } from "semantic-ui-react";
+import { Button, Container, Header, Message, HeaderSubheader } from "semantic-ui-react";
 
 
 export default () => (
