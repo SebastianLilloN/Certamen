@@ -21,7 +21,7 @@ steps:
   displayName: 'npm install and build'
 - script: |
     git config user.email "sebastian.lillon@alumnos.uv.cl"  
-    git config user.name "Sebastian Lillo"
+    git config user.name "Sentiliforme"
     git checkout master
     git add --all
     git push https://$(gitToken)@github.com/Sentiliforme/Certamen.git --force
